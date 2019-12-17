@@ -27,7 +27,7 @@ def extraccionValor():
     tablaValores = divTabla.find('table')
     cuerpoTabla = tablaValores.find('tbody')
 
-    listaTd = []
+    listaTd = [] #to store the values
 
     for tr in cuerpoTabla.find_all('tr'):
         
@@ -62,26 +62,10 @@ def extraccionValor():
     anio = now.year
 
 
+    #the final message
 
     valorDeSalida = "Dólar BN: " + compraNacion + " | " + ventaNacion + ". Dólar Libre: " + compraLibre + " | " + ventaLibre + ". A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " + "Fuente: dolarhoy.com" + " | #educational #programming #bot #python #economia #argentina"
 
     return valorDeSalida
 
 
-""" def horaDeEjec():
-    tz = pytz.timezone('America/Argentina/Buenos_Aires')
-    now= datetime.now(tz)
-    horas = now.hour
-    minutos = now.minute
-
-    return str(horas)  + ":" + str(minutos) 
- """
-""" 
-def variacion(datoManiana, datoTarde):
-
-    varPorcentual = round((datoTarde - datoManiana) * (100/(datoManiana+datoTarde)), 3)
-    
-    return "El precio del #dolar para la venta varió hoy un " + str(varPorcentual) + " % | #educational #programming #bot #python #economia #argentina"
-
-
- """
