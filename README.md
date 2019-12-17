@@ -4,7 +4,7 @@
 
 Telecommunications engineering student.
 
-#### Follow me on Tweeter @aagustinconti ###
+#### Follow me on Twitter @aagustinconti ###
 
 This bot can be used for anyone!
 
