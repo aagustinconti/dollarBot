@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 import time
 from datetime import datetime
 import pytz
+import numpy as np
 
 
 
@@ -46,11 +47,21 @@ def extraccionValor():
     compraLibre = listaTd[2]
     ventaLibre = listaTd[3]
 
- 
+    return [compraNacion, ventaNacion, compraLibre, ventaLibre]
 
-    #time zone
+extraccionPagina = extraccionValor()
 
+compraNacion= extraccionPagina[0]
+ventaNacion= extraccionPagina[1]
+compraLibre= extraccionPagina[2]
+ventaLibre= extraccionPagina[3]
+
+
+
+
+def valorDolar(subeOBaja, nacionOLibre, pesoVsDolar):
     
+    #time zone    
     tz = pytz.timezone('America/Argentina/Buenos_Aires')
 
     #actual time 
@@ -64,8 +75,16 @@ def extraccionValor():
 
     #the final message
 
-    valorDeSalida = "Dólar BN: " + compraNacion + " | " + ventaNacion + ". Dólar Libre: " + compraLibre + " | " + ventaLibre + ". A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " + "Fuente: dolarhoy.com" + " | #educational #programming #bot #python #economia #argentina"
+    if nacionOLibre:
 
+        valorDeSalida = str(subeOBaja) + " a " + str(compraLibre) + " | " + str(ventaLibre) + " y UN AR$ equivale a "+str(pesoVsDolar)+"U$D. A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarLibre #DolarBlue"
+    
+    else:
+
+        valorDeSalida = str(subeOBaja) + " a " + str(compraNacion) + " | " + str(ventaNacion) + ". A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarOficial"
+
+    
     return valorDeSalida
+
 
 
