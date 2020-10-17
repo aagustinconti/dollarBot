@@ -77,7 +77,7 @@ def valorDolar(subeOBaja, nacionOLibre, pesoVsDolar):
 
     if nacionOLibre:
 
-        valorDeSalida = str(subeOBaja) + " a " + str(compraLibre) + " | " + str(ventaLibre) + " y UN AR$ equivale a "+str(pesoVsDolar)+"U$D. A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarLibre #DolarBlue"
+        valorDeSalida = str(subeOBaja) + " a " + str(compraLibre) + " | " + str(ventaLibre) + " y UN (1) Peso Argentino equivale a "+str(pesoVsDolar)+"U$D. A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarLibre #DolarBlue"
     
     else:
 

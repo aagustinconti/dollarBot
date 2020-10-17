@@ -73,7 +73,7 @@ def checkData():
         
         saveData(nombre_archivo, [valoresNuevos])
 
-        irATwittear = twittearConPython.twitt(valorDolar) #we call this module to twitt the data
+        twittearConPython.twitt(valorDolar) #we call this module to twitt the data
         tiempoFinal = time.perf_counter() #end time
         tiempoEjec = tiempoFinal - tiempoInicio #delta time
         print("Valor viejo Oficial", ventaNacionViejo)
@@ -94,7 +94,7 @@ def checkData():
 
             valorDolar = extracciondatos.valorDolar("BAJÓ el Dólar Libre",True, pesoVsDolar)
 
-        elif ventaNacionViejo < ventaNacionNuevo:
+        elif ventaLibreViejo < ventaLibreNuevo:
 
             valorDolar = extracciondatos.valorDolar("SUBIÓ el Dólar Libre",True, pesoVsDolar)
     
@@ -102,7 +102,7 @@ def checkData():
         
         saveData(nombre_archivo, [valoresNuevos])
 
-        irATwittear = twittearConPython.twitt(valorDolar) #we call this module to twitt the data
+        twittearConPython.twitt(valorDolar) #we call this module to twitt the data
         tiempoFinal = time.perf_counter() #end time
         tiempoEjec = tiempoFinal - tiempoInicio #delta time
         print("Valor viejo Libre", ventaLibreViejo)
