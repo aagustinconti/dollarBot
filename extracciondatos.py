@@ -59,8 +59,9 @@ ventaLibre= extraccionPagina[3]
 
 
 
-def valorDolar(subeOBaja, nacionOLibre, pesoVsDolar):
+def valorDolar(subeOBaja, nacionOLibre, pesoVsDolar, valoresNuevos):
     
+    compraOficialNuevo, ventaOficialNuevo, compraLibreNuevo, ventaLibreNuevo = valoresNuevos
     #time zone    
     tz = pytz.timezone('America/Argentina/Buenos_Aires')
 
@@ -77,11 +78,11 @@ def valorDolar(subeOBaja, nacionOLibre, pesoVsDolar):
 
     if nacionOLibre:
 
-        valorDeSalida = str(subeOBaja) + " a " + str(compraLibre) + " | " + str(ventaLibre) + " y UN (1) Peso Argentino equivale a "+str(pesoVsDolar)+"U$D. A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarLibre #DolarBlue"
+        valorDeSalida = str(subeOBaja) + " a $ " + str(compraLibreNuevo) + " | $ " + str(ventaLibreNuevo) + " y UN (1) Peso Argentino equivale a "+str(pesoVsDolar)+"U$D. A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarLibre #DolarBlue"
     
     else:
 
-        valorDeSalida = str(subeOBaja) + " a " + str(compraNacion) + " | " + str(ventaNacion) + ". A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarOficial"
+        valorDeSalida = str(subeOBaja) + " a $ " + str(compraOficialNuevo) + " | $ " + str(ventaOficialNuevo) + ". A las " + str(horas) + " horas y " + str(minutos) + " minutos del " + str(dia) + "/" + str(mes) + "/" + str(anio) +". " +  "#DolarOficial"
 
     
     return valorDeSalida
