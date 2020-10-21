@@ -6,7 +6,7 @@ from datetime import datetime
 import pytz
 
 #time zone    
-tz = pytz.timezone('America/Argentina/Buenos_Aires')
+tz = tz = pytz.timezone('America/Argentina/Cordoba')
 
 #actual time 
 now= datetime.now(tz)
@@ -64,7 +64,7 @@ def recover_data(file_name):
             values.append(row)
     csvfile.close()
     
-    values.pop()
+    #values.pop()
     values = values[0]
 
     return values
