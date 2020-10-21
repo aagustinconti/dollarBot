@@ -5,20 +5,22 @@ import time
 from datetime import datetime
 import pytz
 
-#time zone    
-tz = tz = pytz.timezone('America/Argentina/Cordoba')
 
-#actual time 
-now= datetime.now(tz)
-horas = now.hour
-minutos = now.minute
-dia = now.day
-mes = now.month
-anio = now.year
 
 def dollar_value(up_or_down, oficial_or_blue, peso_vs_dolar, new_values):
     
     new_compra_oficial, new_venta_oficial, new_compra_blue, new_venta_blue = new_values
+
+    #time zone    
+    tz = tz = pytz.timezone('America/Argentina/Cordoba')
+
+    #actual time 
+    now= datetime.now(tz)
+    horas = now.hour
+    minutos = now.minute
+    dia = now.day
+    mes = now.month
+    anio = now.year
 
     #the final message
 
