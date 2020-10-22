@@ -66,21 +66,9 @@ def recover_data(file_name):
             values.append(row)
     csvfile.close()
     
-    #values.pop()
+    
     values = values[0]
 
     return values
 
 
-""" Example (run to test):
-
-file_name='temporal_store'
-
-old_data =['$ 76,75', '$ 82,75', '$ 176,00', '$ 180,00']
-print(old_data)
-data_converted = convert_data(old_data)
-print(data_converted)
-save_data(file_name, [data_converted])
-print(recover_data(file_name))
-new_data_converted = convert_data(recover_data(file_name))
-print(new_data_converted) """

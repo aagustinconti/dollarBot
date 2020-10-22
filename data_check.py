@@ -30,7 +30,8 @@ def data_check():
     if old_values != new_values:
         
         #Remove file because Heroku crash modified files
-        os.system('rm '+str(file_name)+'.csv')
+        os.system('rm ./'+str(file_name)+'.csv')
+        print("Actualizando valores y borrando: "+ str(file_name)+'.csv')
 
 
         #Dolar oficial check
@@ -89,7 +90,9 @@ def data_check():
             print('Se twitteo el precio del dolar LIBRE con exito. En ' + str(execution_time) + '[s].')
 
     
+        
         save_data(file_name,[new_values])    
+    
     
     final_time_function = perf_counter() 
     execution_time = final_time_function - init_time_function
